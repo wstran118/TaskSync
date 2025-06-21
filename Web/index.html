@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" context="width=device-widwth, initial-scale=1.0">
+    <title>TaskSync</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>TaskSync</h1>
+        <div id="auth">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <button onclick="register()">Register</button>
+        </div>
+        <div id="tasks" style="display:none">
+            <h2>Tasks</h2>
+            <input type="text" id="taskTitle" placeholder="Task Title">
+            <input type="text" id="taskDesc" placeholder="Description">
+            <input type="date" id="taskDueDate">
+            <button onclick="createTask()">Add Task</button>
+            <ul id="taskList"></ul>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
